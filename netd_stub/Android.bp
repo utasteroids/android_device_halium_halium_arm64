@@ -1,0 +1,19 @@
+// Minimal android.system.net.netd.INetd stub for Halium.
+// See NetdStub.h for why this exists.
+
+cc_binary {
+    name: "android.system.net.netd-service.stub",
+    relative_install_path: "hw",
+    init_rc: ["netd_stub.rc"],
+    srcs: [
+        "main.cpp",
+        "NetdStub.cpp",
+    ],
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "liblog",
+        "libutils",
+        "android.system.net.netd-V1-ndk",
+    ],
+}

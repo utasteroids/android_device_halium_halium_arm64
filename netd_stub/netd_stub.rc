@@ -1,0 +1,11 @@
+# Minimal android.system.net.netd.INetd stub. Started early and left
+# running (not lazy/disabled): vendor daemons such as Qualcomm's nicmd call
+# `ctl.interface_start aidl/android.system.net.netd.INetd/default` and block
+# indefinitely if no service declares this interface at all. Declaring it
+# here satisfies that regardless of timing; the `class core` + always-on
+# service means it is already registered well before anything asks.
+service netd_stub /system/bin/hw/android.system.net.netd-service.stub
+    class core
+    user root
+    group root net_admin
+    interface aidl android.system.net.netd.INetd/default
