@@ -26,6 +26,11 @@ OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 <manifest version="1.0" type="framework">
+    <hal format="aidl">
+        <name>android.system.net.netd</name>
+        <version>1</version>
+        <fqname>INetd/default</fqname>
+    </hal>
     <hal format="hidl" override="true">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
