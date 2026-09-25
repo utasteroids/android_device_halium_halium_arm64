@@ -52,6 +52,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     getSPL
 
+# Minimal AIDL android.system.net.netd.INetd, needed by vendor data daemons
+PRODUCT_PACKAGES += \
+    android.system.net.netd-service.stub
+
 # Test tools
 PRODUCT_PACKAGES += \
     bootctl \
